@@ -1,0 +1,28 @@
+{
+  "name": "@verney-design/ui",
+  "private": false,
+  "version": "1.0.0",
+  "description": "vue3组件库~",
+  "main": "dist/lib/index.js",
+  "module":"dist/es/index.js",
+  "scripts": {
+    "build": "vite build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "verney-design-ui",
+    "vue3组件库"
+  ],
+  "author": "zhou",
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "exports": {
+    "./dist/style.css": "./dist/lib/style.css"
+},
+  "dependencies": {
+    "@verney-design/utils": "workspace:^1.0.0"
+  }
+}

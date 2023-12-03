@@ -1,0 +1,23 @@
+{
+  "name": "verney-vue-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "zhou",
+  "license": "ISC",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.1",
+    "less": "^4.2.0",
+    "typescript": "^5.3.2",
+    "vite": "^5.0.4",
+    "vite-plugin-dts": "^3.6.4",
+    "vue": "^3.3.9"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
