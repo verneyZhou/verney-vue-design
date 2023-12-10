@@ -7,14 +7,13 @@
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",
-    "deploy": "chmod +x ./deploy.sh && node scripts/deploy.js",
+    "deploy": "chmod +x ./deploy.sh && bash deploy.sh",
     "serve": "vitepress serve"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@verney-design/ui": "workspace:^1.0.0",
-    "prismjs": "^1.29.0"
+    "@verney-design/ui": "workspace:^1.0.0"
   }
 }
