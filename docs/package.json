@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "verney-design 组件库文档",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "dev": "vitepress dev",
     "build": "vitepress build",

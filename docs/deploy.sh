@@ -3,7 +3,7 @@
 # 忽略错误
 # set -e
 
-pnpm install
+# pnpm install
 
 # 构建
 pnpm run build
