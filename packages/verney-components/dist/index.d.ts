@@ -1,6 +1,6 @@
-import Button from "./button";
-import Input from "./input";
-export { Button, Input };
+import VnButton from "./button";
+import VnInput from "./input";
+export { VnButton, VnInput };
 declare const _default: (({
     new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{}>>, {}, true, {}, {}, {
         P: {};

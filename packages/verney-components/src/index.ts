@@ -1,12 +1,13 @@
 
 
-import Button from "./button";
-import Input from "./input"; // 导出组件
+import VnButton from "./button"; // 导入组件
+import VnInput from "./input";
 
-
+// 导出组件
 export {
-    Button,
-    Input
+    VnButton,
+    VnInput
 }
 
-export default [Button, Input] 
+// 默认导出所有组件的数组
+export default [VnButton, VnInput] 

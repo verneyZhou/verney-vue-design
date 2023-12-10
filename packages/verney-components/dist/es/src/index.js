@@ -1,8 +1,8 @@
-import o from "./button/index.js";
-import t from "./input/index.js";
-const r = [o, t];
+import t from "./button/index.js";
+import o from "./input/index.js";
+const m = [t, o];
 export {
-  o as Button,
-  t as Input,
-  r as default
+  t as VnButton,
+  o as VnInput,
+  m as default
 };

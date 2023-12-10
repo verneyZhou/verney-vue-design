@@ -9,6 +9,14 @@ export default defineConfig({
         open: true, // 设置服务启动时是否自动打开浏览器
         cors: true, // 允许跨域
     },
-    plugins:[vue()]
+    plugins:[
+        vue({
+            // template: {
+            //     compilerOptions: {
+            //       isCustomElement: tag => tag.startsWith('Vn')
+            //     }
+            // }
+        })
+    ]
 })
 

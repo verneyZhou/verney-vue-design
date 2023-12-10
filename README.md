@@ -5,6 +5,9 @@
 
 mkdir verney-vue-design
 
+npm install pnpm -g
+
+pnpm -v
 
 `pnpm init`
 
@@ -14,6 +17,19 @@ mkdir verney-vue-design
 
 新建`tsconfig.json`: `npx tsc --init`, 进行 ts 配置
 
+
+### 包关联配置
+
+> 我们新建一个 `packages` 文件夹用于后续来存放我们的各种包; 假如我们有了 `a` 包和 `b`, 为了方便a引用b时`pnpm add @xxx/b`不报错，需要先进行包关联配置
+
+- 新建`pnpm-workspace.yaml`：
+
+``` yml
+packages:
+    - 'packages/**'
+    - 'examples'
+```
+> 这样就能将我们项目下的`packages`目录和`examples`目录关联起来了, 之后在组件库中引用工具库时就会看到它的效果~
 
 
 ### examples
@@ -59,8 +75,8 @@ mkdir verney-vue-design
 
 - 新建文件夹：`packages/verney-components`, 进入该目录；`pnpm init`
 
-- 添加软链接：`pnpm install @kitty-ui/utils`，之后`package.json`中会添加软连，指向本地的`utils`包：
-> `pnpm add @kitty-ui/utils`也可以~
+- 添加软链接：`pnpm install @verney-design/utils`，之后`package.json`中会添加软连，指向本地的`utils`包：
+> `pnpm add @verney-design/utils`也可以~
 
 ``` json
  "dependencies": {
@@ -191,6 +207,142 @@ plugins: [
 - 之后需要在[npm](https://www.npmjs.com/)上注册一个账号；
 
 - 如果发布像我们这种`@[org]/[child]`命名结构的包，需要先在 npm 上创建一个组织`Organization`，名称就是[org]；
+
+
+- `npm login`,输入账户密码登录，也需要输入邮箱，输入验证码~
+
+- `npm publish`，发布；成功后在npm官网刚创建的[组织](https://www.npmjs.com/settings/verney-design/packages)下面就能看到刚发布的包了~！
+> 如果发布的是公共包的话，需要执行: `pnpm publish --access public`
+
+
+#### 使用
+
+> 组件库发布后，就可以跟其他第三方包一样直接安装使用了~
+
+
+- 安装：`pnpm install @verney-design/ui -S`
+
+- 使用：
+
+``` js
+import {Button, Input} from '@verney-design/ui';
+import "@verney-design/ui/dist/style.css"; // 引入css样式
+```
+
+
+
+
+
+
+## 文档docs
+
+> 组件开发完毕，就需要一个组件库使用文档了，这里使用`vitepress`来进行开发~
+
+
+[VitePress官网](https://vitejs.cn/vitepress/)
+
+
+### 初始化
+
+- 首先项目根目录下新建`docs`目录，进入该目录；
+
+- 安装vitepress: `pnpm install vitepress -D -w`
+
+- 初始化：`pnpm init`, 生成`package.json`;
+
+- 创建`index.md`: `echo '# Hello VitePress' > index.md`
+
+- pkg中添加命令：
+
+``` json
+"scripts": {
+  "docs:dev": "vitepress dev", // 默认启动 index.md
+  // "docs:dev": "vitepress dev src/index.md", // 可指定入口文件
+  "docs:build": "vitepress build",
+  "docs:serve": "vitepress serve"
+}
+```
+
+- 启动：`pnpm run docs:dev`, 会默认启动一个端口，并生成`.vitepress`文件夹~
+
+
+### 配置
+
+> 服务启动成功后，接下来就可以开始配置细节了，具体配置规则其实跟`vuepress`挺类似的~
+
+- `docs/index.md`中可以配置首页布局；
+> 使用[Frontmatter](https://vitejs.cn/vitepress/guide/frontmatter.html)来进行配置的；
+
+- `.vitepress/config.ts`中配置页面顶部导航`nav`，左侧边栏`sidebar`，顶部`footer`等模块；
+> 具体配置信息参考这里[config](https://vitejs.cn/vitepress/config/basics.html)
+
+
+``` ts
+// .vitepress/config.ts
+
+import nav from './configs/nav' // 顶部导航配置信息
+import sidebar from './configs/sidebar' // 左侧边栏配置信息
+import footer from './configs/footer' // 底部footer配置信息
+
+export default {
+  title: 'verney-vue-design', // 站点的标题
+  description: 'verney-vue-design前端组件库', // 站点的描述,将作为<meta>标记渲染在页面HTML中
+  appearance: true, // 允许默认的颜色主题切换
+  base: '/', // base URL; 如果计划将站点部署到https://foo.github.io/bar/,那么需要设置base为'/bar/'
+//   lang: 'en-US', // 设置语言, 这个属性将作为<html lang="en-US">标记渲染到页面HTML中。
+// head: 额外的需要被注入到当前页面的HTML<head>中的标签,每个标签都可以以 [tagName, { attrName: attrValue }, innerHTML?] 的格式指定
+  head: [
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/logo/favicon.svg'
+      }
+    ]
+  ],
+  // 主题配置
+  themeConfig: {
+    logo: '/logo/favicon.svg', // 导航栏logo
+    nav, // 顶部导航
+    sidebar, // 侧边栏
+    footer // 页脚
+  }
+}
+```
+
+> 具体配置信息见代码，这里不再赘述~
+
+
+
+### 组件预览
+> 在`elment-plus`或者其他第三方组件库文档中都会有一个功能，就是组件预览及源码查看，接下来需要创建一个组件来实现这个功能~
+
+
+- 安装：`pnpm install @vueuse/core prismjs @element-plus/icons-vue element-plus -S -w`
+
+- 预览：`vp-demo.vue`
+
+- 查看源码：`source-code.ts`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

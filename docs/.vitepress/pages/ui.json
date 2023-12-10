@@ -1,0 +1,32 @@
+[
+    {
+        "text": "基础组件",
+        "collapsible": true,
+        "collapsed": false,
+        "items": [
+            {
+                "text": "Button 按钮",
+                "link": "/pages/comps/ui/button"
+            },
+            {
+                "text": "Input 输入框",
+                "link": "/pages/comps/ui/input"
+            }
+        ]
+    },
+    {
+        "text": "展示组件",
+        "collapsible": true,
+        "collapsed": false,
+        "items": [
+            {
+                "text": "Table 表格",
+                "link": "/pages/comps/ui/table"
+            },
+            {
+                "text": "DatePicker 日期选择器",
+                "link": "/pages/comps/ui/date-picker"
+            }
+        ]
+    }
+]

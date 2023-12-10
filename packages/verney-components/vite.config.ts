@@ -4,9 +4,9 @@ import { defineConfig } from "vite";
 import {resolve} from "path";
 import vue from "@vitejs/plugin-vue"
 import dts from 'vite-plugin-dts'
+// @ts-ignore
+import DefineOptions from "unplugin-vue-define-options/vite";
 
-
-console.log('====__dirname', __dirname)
 
 export default defineConfig({
     resolve: {
@@ -26,7 +26,7 @@ export default defineConfig({
             entry: './index.ts', // 打包入口
             name: '@verney-design/ui', // 库名称
             // fileName: (format) => `verney-design-ui.${format}.js`, // 生成js文件名称
-            formats: ['es', 'cjs']
+            formats: ['es', 'cjs', 'umd'], // 支持umd、cjs、esm三种格式
         },
         rollupOptions: {
             //忽略打包vue文件
@@ -66,6 +66,7 @@ export default defineConfig({
             // 指定使用的tsconfig.json为整个项目根目录下的
             // 如果不配置,也可以在components下新建tsconfig.json
             tsConfigFilePath: "../../tsconfig.json",
-          }),
+        }),
+        DefineOptions(), // 用于在.vue文件中使用defineOptions, 注意这个要写在dts后面
     ]
 })

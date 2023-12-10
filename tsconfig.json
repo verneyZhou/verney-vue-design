@@ -9,6 +9,7 @@
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
+    "types": ["easyest/lib/src/components"],
     "rootDirs": ["./", "./packages/components"],
     "paths": {
       "@/*": ["packages/components/src/*"]

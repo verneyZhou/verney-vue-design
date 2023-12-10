@@ -1,0 +1,13 @@
+[
+    {
+        "text": "Verney-utils工具库",
+        "collapsible": true,
+        "collapsed": false,
+        "items": [
+            {
+                "text": "基础",
+                "link": "/pages/comps/utils/index"
+            }
+        ]
+    }
+]

@@ -1,15 +1,13 @@
-import { defineComponent as t, onMounted as o, openBlock as e, createElementBlock as n } from "vue";
+import { defineComponent as t, onMounted as o, openBlock as n, createElementBlock as e } from "vue";
 import { addFn as r } from "@verney-design/utils";
-const _ = { class: "verney-ui-button__wrapper" }, c = {
-  name: "Button"
-}, m = /* @__PURE__ */ t({
-  ...c,
-  setup(u) {
+const _ = { class: "verney-ui-button__wrapper" }, u = t({ name: "vn-button" }), d = /* @__PURE__ */ t({
+  ...u,
+  setup(c) {
     return o(() => {
       console.log("==button==mounted", r(1, 2));
-    }), (s, a) => (e(), n("div", _, "button 组件"));
+    }), (s, a) => (n(), e("button", _, "button 组件"));
   }
 });
 export {
-  m as default
+  d as default
 };

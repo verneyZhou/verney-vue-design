@@ -1,0 +1,19 @@
+{
+  "name": "@verney-design/docs",
+  "version": "1.0.0",
+  "description": "verney-design 组件库文档",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "deploy": "chmod +x ./deploy.sh && node scripts/deploy.js",
+    "serve": "vitepress serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@verney-design/ui": "workspace:^1.0.0"
+  }
+}

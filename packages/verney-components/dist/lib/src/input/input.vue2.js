@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e={name:"Input"};exports.default=e;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("vue"),t={class:"verney-ui-input__wrapper",placeholder:"input 组件"},n=e.defineComponent({name:"vn-input"}),o=e.defineComponent({...n,setup(u){return(r,_)=>(e.openBlock(),e.createElementBlock("input",t))}});exports.default=o;
