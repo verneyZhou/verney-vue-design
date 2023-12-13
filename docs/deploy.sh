@@ -9,7 +9,7 @@
 pnpm run build
 
 # 进入待发布的目录
-cd docs/.vitepress/dist
+cd .vitepress/dist
 
 git remote add origin https://github.com/verney-design/docs.git
 git add -A

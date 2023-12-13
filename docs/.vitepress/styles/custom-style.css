@@ -13,7 +13,7 @@ body {
   }
   
   :root {
-    --vp-c-brand: var(--vc-primary-color);
+    --vp-c-brand: var(--vc-primary-color); /** 主题色 */
     --vp-c-brand-light: var(--vc-primary-hover-color);
     --vp-c-brand-lighter: var(--vc-primary-hover-color-lighter);
     --vp-c-brand-dark: var(--vc-primary-color);
