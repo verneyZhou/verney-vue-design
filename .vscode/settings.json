@@ -1,0 +1,9 @@
+{
+    // eslint配置
+  "eslint.run": "onSave", // 保存的时候执行校验
+  // eslint 自动修复
+  "eslint.autoFixOnSave": true,
+  "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+  },
+}
