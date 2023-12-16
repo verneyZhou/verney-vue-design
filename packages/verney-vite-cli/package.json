@@ -1,7 +1,8 @@
 {
-  "name": "@verney-design/verney-vite-cli",
-  "version": "1.0.1",
-  "description": "快速搭建vite+vue3项目脚手架",
+  "name": "verney-vite-cli",
+  "private": false,
+  "version": "1.0.0",
+  "description": "快速搭建vite+vue3项目脚手架~",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +10,11 @@
   "bin": {
     "verney-vite-cli": "./index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "vite",
+    "vue3"
+  ],
+  "author": "zhou",
   "license": "MIT",
   "repository": {
     "type": "git",
