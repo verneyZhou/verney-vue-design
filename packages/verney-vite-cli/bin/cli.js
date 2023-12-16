@@ -1,26 +1,27 @@
 const path = require('path');
-const program = require('commander');
+const program = require('commander'); // 命令行交互工具
 // 扩展一下输出的样式
 const chalk = require('chalk');
-const fsExtra = require('fs-extra');
-const { exec } = require('child_process');
-const ora = require('ora');
+const ora = require('ora'); // 用于输出loading样式
+const fsExtra = require('fs-extra'); // fs-extra 是对 fs 模块的扩展，支持 promise 语法
+const { exec } = require('child_process'); // 子进程
 
-const pkgName = 'verney-vite-cli';
-const pkg = require('../package.json');
-const { inquirerPrompt } = require('./inquirer');
+const pkg = require('../package.json'); // 引入package.json
+const { inquirerPrompt } = require('./inquirer'); // 引入用户配置信息
 const { install } = require('./install');
+const remoteUrl = 'https://github.com/verneyZhou/vue3-vite-admin.git'; // 模板地址
+const remoteTempName = 'vue3-vite-admin'; // 远程模板名称
 
-//logs
+//定义logs样式
 const defaultLog = (log) => console.log(chalk.blue(`---------------- ${log} ----------------`));
 const errorLog = (log) => console.log(chalk.red(`---------------- ${log} ----------------`));
 // const successLog = (log) => console.log(chalk.green(`---------------- ${log} ----------------`));
 
 // 初始化
 const init = () => {
-    defaultLog(`欢迎使用 ${pkgName} 脚手架工具`);
+    defaultLog(`欢迎使用 ${pkg.name} 脚手架工具`);
     program
-        .name(pkgName)
+        .name(pkg.name)
         .usage('<command> [options]') // 定义命令的使用方法
         .description(chalk.greenBright('🚀🚀🚀🚀🚀一个快速生成Vue3项目的脚手架🚀🚀🚀🚀🚀'))
         .version(pkg.version)
@@ -31,8 +32,8 @@ const init = () => {
 // 帮助命令: verney-vite-cli --help 时的输出
 const help = () => {
     program.on('--help', () => {
-        console.log('\r\n' + chalk.white.bgBlueBright.bold(pkgName));
-        console.log(`\r\nRun ${chalk.cyan(`${pkgName} create [name]`)} 创建新项目\r\n`);
+        console.log('\r\n' + chalk.white.bgBlueBright.bold(pkg.name));
+        console.log(`\r\nRun ${chalk.cyan(`${pkg.name} create [name]`)} 创建新项目\r\n`);
     });
 };
 
@@ -70,7 +71,6 @@ const cloneTemp = (opts = {}) => {
         return;
     }
     fsExtra.mkdirSync(cmdPath); // 创建项目
-    const remoteUrl = 'https://github.com/verneyZhou/vue3-vite-admin.git';
     const cmd = `cd ${opts.projectName} && git clone ${remoteUrl}`;
     const spinner = ora();
     spinner.start(`正在创建中，请稍等...`);
@@ -85,7 +85,7 @@ const cloneTemp = (opts = {}) => {
                 fsExtra.removeSync(cmdPath); // 删除文件
                 return;
             }
-            const copyDir = path.resolve(process.cwd(), `./${opts.projectName}/vue3-vite-admin`);
+            const copyDir = path.resolve(process.cwd(), `./${opts.projectName}/${remoteTempName}`);
             if (!fsExtra.existsSync(copyDir)) {
                 errorLog('项目创建失败，请重试');
                 return;

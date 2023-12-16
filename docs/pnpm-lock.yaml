@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@verney-design/ui': workspace:^1.0.0
+  '@verney-design/ui': ^1.0.0
 
 dependencies:
   '@verney-design/ui': link:../packages/verney-components

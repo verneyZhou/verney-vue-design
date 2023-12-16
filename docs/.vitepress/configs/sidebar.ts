@@ -11,7 +11,7 @@ export default {
       "collapsed": false,
       items: [
         { text: 'verney-ui', link: '/pages/guide/ui' },
-        { text: 'verney-cli', link: '/pages/guide/cli' },
+        { text: 'verney-vite-cli', link: '/pages/guide/cli' },
         { text: 'verney-utils', link: '/pages/guide/utils' },
       ]
     },

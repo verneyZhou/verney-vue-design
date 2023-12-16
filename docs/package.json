@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@verney-design/ui": "workspace:^1.0.0"
+    "@verney-design/ui": "^1.0.0"
   }
 }
