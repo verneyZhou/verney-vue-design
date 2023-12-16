@@ -1,0 +1,7 @@
+lockfileVersion: 5.4
+
+specifiers:
+  '@verney-design/utils': workspace:^1.0.0
+
+dependencies:
+  '@verney-design/utils': link:../verney-utils

@@ -1,0 +1,26 @@
+{
+  "name": "@verney-design/verney-vite-cli",
+  "version": "1.0.1",
+  "description": "快速搭建vite+vue3项目脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "verney-vite-cli": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/verneyZhou/verney-vue-design"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^11.1.0",
+    "fs-extra": "^11.2.0",
+    "inquirer": "^8.2.6",
+    "ora": "^4.1.1"
+  }
+}

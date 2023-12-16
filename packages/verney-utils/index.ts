@@ -1,15 +1,8 @@
-
-
-
-import withInstall from "./src/withinstall"
+import withInstall from './src/withinstall';
 
 function addFn(a: number, b: number): number {
-    return a + b
+    return a + b;
 }
-
 
 // 导出公共方法
-export {
-    addFn,
-    withInstall
-}
+export { addFn, withInstall };

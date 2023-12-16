@@ -37,8 +37,12 @@ module.exports = {
                 }
             }
         ],
-        'vue/script-indent': ['error', 4, { baseIndent: 0, switchCase: 1 }]
+        'vue/script-indent': ['error', 4, { baseIndent: 0, switchCase: 1 }],
         // 2. 开启 prettier 自动修复的功能
+        '@typescript-eslint/no-explicit-any': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        'vue/multi-word-component-names': 'off'
         // 'prettier/prettier': 'error',
         // '@typescript-eslint/ban-ts-comment': 'off',
         // 'vue/multi-word-component-names': 'off'
