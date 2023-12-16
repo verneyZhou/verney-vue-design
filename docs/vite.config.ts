@@ -9,10 +9,10 @@ export default defineConfig(async ({ command, mode }) => {
             open: true, // 设置服务启动时是否自动打开浏览器
             cors: true // 允许跨域
         },
-        plugins: [sourceCode()],
-        build: {
-            //输出文件目录
-            outDir: '.vitepress/dist'
-        }
+        plugins: [sourceCode()]
+        // build: {
+        //     //输出文件目录
+        //     outDir: '.vitepress/dist'
+        // }
     };
 });
