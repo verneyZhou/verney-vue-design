@@ -7,12 +7,17 @@
     "dev": "vitepress dev",
     "build": "vitepress build",
     "deploy": "chmod +x ./deploy.sh && bash deploy.sh",
-    "serve": "vitepress serve"
+    "serve": "vitepress serve",
+    "documate:upload": "documate upload"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@documate/vue": "^0.3.1",
     "@verney-design/ui": "workspace:^1.0.2"
+  },
+  "devDependencies": {
+    "@documate/documate": "^0.2.1"
   }
 }
