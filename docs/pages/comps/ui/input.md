@@ -21,8 +21,8 @@
 
 <vp-demo
     demo-height="270px"
-    source-code="ui:::button"
-    demo-name="button"
+    source-code="ui:::input"
+    demo-name="input"
 >
 </vp-demo>
 
