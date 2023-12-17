@@ -1,5 +1,5 @@
 <template>
-    <button class="verney-ui-button__wrapper">button 组件</button>
+    <button class="verney-ui-button__wrapper">button 组件22</button>
 </template>
 
 <!-- <script lang='ts'>

@@ -4,8 +4,8 @@ import sidebar from './configs/sidebar'
 import footer from './configs/footer'
 
 export default {
-title: 'verney-vue-design', // 站点的标题
-  description: 'verney-vue-design前端组件库', // 站点的描述,将作为<meta>标记渲染在页面HTML中
+title: 'verney-design', // 站点的标题
+  description: 'verney-design前端组件库', // 站点的描述,将作为<meta>标记渲染在页面HTML中
   appearance: true, // 允许默认的颜色主题切换
   base: '/', // base URL; 如果计划将站点部署到https://foo.github.io/bar/,那么需要设置base为'/bar/'
 //   lang: 'en-US', // 设置语言, 这个属性将作为<html lang="en-US">标记渲染到页面HTML中。
