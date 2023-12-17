@@ -1,12 +1,14 @@
 {
   "name": "@verney-design/ui",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "vue3组件库~",
   "main": "index.ts",
+  "module": "index.js",
   "scripts": {
     "build": "vite build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "files": [
     "dist"

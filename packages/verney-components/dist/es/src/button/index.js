@@ -1,6 +1,6 @@
 import t from "./button.vue.js";
 import { withInstall as o } from "@verney-design/utils";
-const n = o(t);
+const n = o(t), s = n;
 export {
-  n as default
+  s as default
 };

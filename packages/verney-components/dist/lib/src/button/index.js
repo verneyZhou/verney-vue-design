@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("./button.vue.js"),e=require("@verney-design/utils"),u=e.withInstall(t.default);exports.default=u;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("./button.vue.js"),e=require("@verney-design/utils"),u=e.withInstall(t.default),o=u;exports.default=o;

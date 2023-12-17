@@ -1,6 +1,7 @@
 <template>
     <div>
-        <vn-button></vn-button>
+        <vn-button type="primary"></vn-button>
+        <vn-button type="success"></vn-button>
     </div>
 </template>
 <script setup lang="ts">

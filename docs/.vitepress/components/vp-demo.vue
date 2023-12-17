@@ -11,7 +11,9 @@
           </i>
         </div>
         <ClientOnly>
-            <component :is="demoComp" v-if="demoComp" />
+            <div class="comps-show-wrapper">
+              <component :is="demoComp" v-if="demoComp" />
+            </div>
         </ClientOnly>
         
         <!-- <iframe class="elp-iframe"
@@ -245,5 +247,9 @@
         margin-right: 8px;
       }
     }
+  }
+
+  .comps-show-wrapper {
+    padding: 10px;
   }
   </style>

@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import vue from '@vitejs/plugin-vue';
@@ -63,5 +65,8 @@ export default defineConfig({
             tsConfigFilePath: '../../tsconfig.json'
         }),
         DefineOptions() // 用于在.vue文件中使用defineOptions, 注意这个要写在dts后面
-    ]
+    ],
+    test: {
+        environment: 'happy-dom'
+    }
 });

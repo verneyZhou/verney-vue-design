@@ -3,3 +3,6 @@ node_modules
 .vite
 
 cache
+
+packages/verney-components/dist
+packages/verney-components/coverage

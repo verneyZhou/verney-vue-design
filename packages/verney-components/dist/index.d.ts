@@ -1,33 +1,89 @@
-import VnButton from "./button";
-import VnInput from "./input";
+import VnButton from './button';
+import VnInput from './input';
 export { VnButton, VnInput };
-declare const _default: (({
-    new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{}>>, {}, true, {}, {}, {
+declare const _default: (import("@verney-design/utils/src/withinstall").SFCWithInstall<{
+    new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{
+        type: {
+            type: StringConstructor;
+            validator(value: string): boolean;
+        };
+        plain: BooleanConstructor;
+        round: BooleanConstructor;
+        disabled: BooleanConstructor;
+        icon: StringConstructor;
+        iconPosition: StringConstructor;
+        size: {
+            type: StringConstructor;
+            validator(value: string): boolean;
+        };
+    }>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{
+        type: {
+            type: StringConstructor;
+            validator(value: string): boolean;
+        };
+        plain: BooleanConstructor;
+        round: BooleanConstructor;
+        disabled: BooleanConstructor;
+        icon: StringConstructor;
+        iconPosition: StringConstructor;
+        size: {
+            type: StringConstructor;
+            validator(value: string): boolean;
+        };
+    }>>, {
+        plain: boolean;
+        round: boolean;
+        disabled: boolean;
+    }, true, {}, {}, {
         P: {};
         B: {};
         D: {};
         C: {};
         M: {};
         Defaults: {};
-    }, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, {}>;
+    }, Readonly<import("vue").ExtractPropTypes<{
+        type: {
+            type: StringConstructor;
+            validator(value: string): boolean;
+        };
+        plain: BooleanConstructor;
+        round: BooleanConstructor;
+        disabled: BooleanConstructor;
+        icon: StringConstructor;
+        iconPosition: StringConstructor;
+        size: {
+            type: StringConstructor;
+            validator(value: string): boolean;
+        };
+    }>>, {}, {}, {}, {}, {
+        plain: boolean;
+        round: boolean;
+        disabled: boolean;
+    }>;
     __isFragment?: undefined;
     __isTeleport?: undefined;
     __isSuspense?: undefined;
-} & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & ((app: import("vue").App<any>, ...options: any[]) => any) & {
-    install?: ((app: import("vue").App<any>, ...options: any[]) => any) | undefined;
-}) | ({
-    new (...args: any[]): import("vue").CreateComponentPublicInstance<Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & Readonly<import("vue").ExtractPropTypes<{}>>, {}, true, {}, {}, {
-        P: {};
-        B: {};
-        D: {};
-        C: {};
-        M: {};
-        Defaults: {};
-    }, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, {}>;
-    __isFragment?: undefined;
-    __isTeleport?: undefined;
-    __isSuspense?: undefined;
-} & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & {
-    install: (app: import("vue").App<any>, ...options: any[]) => any;
-}))[];
+} & import("vue").ComponentOptionsBase<Readonly<import("vue").ExtractPropTypes<{
+    type: {
+        type: StringConstructor;
+        validator(value: string): boolean;
+    };
+    plain: BooleanConstructor;
+    round: BooleanConstructor;
+    disabled: BooleanConstructor;
+    icon: StringConstructor;
+    iconPosition: StringConstructor;
+    size: {
+        type: StringConstructor;
+        validator(value: string): boolean;
+    };
+}>>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {
+    plain: boolean;
+    round: boolean;
+    disabled: boolean;
+}, {}, string, {}> & import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps & (new () => {
+    $slots: {
+        default?(_: {}): any;
+    };
+})> | import("@verney-design/utils/src/withinstall").SFCWithInstall<import("vue").DefineComponent<{}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").VNodeProps & import("vue").AllowedComponentProps & import("vue").ComponentCustomProps, Readonly<import("vue").ExtractPropTypes<{}>>, {}, {}>>)[];
 export default _default;

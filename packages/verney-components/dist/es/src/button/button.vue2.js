@@ -1,13 +1,21 @@
-import { defineComponent as t, onMounted as o, openBlock as n, createElementBlock as e } from "vue";
-import { addFn as r } from "@verney-design/utils";
-const _ = { class: "verney-ui-button__wrapper" }, u = t({ name: "vn-button" }), d = /* @__PURE__ */ t({
-  ...u,
-  setup(c) {
-    return o(() => {
-      console.log("==button==mounted", r(1, 2));
-    }), (s, a) => (n(), e("button", _, "button 组件"));
+import { defineComponent as o, computed as u, onMounted as p, openBlock as s, createElementBlock as a, normalizeClass as l, createTextVNode as c, renderSlot as m } from "vue";
+import { addFn as d } from "@verney-design/utils";
+import { buttonProps as _ } from "./types.js";
+const b = o({ name: "vn-button" }), k = /* @__PURE__ */ o({
+  ...b,
+  props: _,
+  setup(e) {
+    const t = e, n = u(() => t.type ? `vn-button__${t.type}` : "");
+    return p(() => {
+      console.log("==button==mounted", d(1, 2));
+    }), (r, f) => (s(), a("button", {
+      class: l(["verney-ui-button__wrapper", n.value])
+    }, [
+      c(" button 组件 "),
+      m(r.$slots, "default", {}, void 0, !0)
+    ], 2));
   }
 });
 export {
-  d as default
+  k as default
 };
