@@ -3,8 +3,8 @@
   "private": false,
   "version": "1.0.2",
   "description": "vue3组件库~",
-  "main": "dist/lib/index.js",
-  "module": "dist/es/index.js",
+  "main": "index.ts",
+  "module": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
